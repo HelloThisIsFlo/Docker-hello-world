@@ -1,0 +1,17 @@
+version: '3'
+services:
+    bonjour:
+        build: .
+        image: shockn745/hello-world
+        ports:
+            - "1111:80"
+        environment:
+            - WORLD=bonjour
+
+    ola:
+        build: .
+        image: shockn745/hello-world
+        ports:
+            - "2222:80"
+        environment:
+            - WORLD=ola
