@@ -1,9 +1,11 @@
 FROM node
 
 RUN mkdir /app
-ADD . /app
 WORKDIR /app
 
+ADD ./package.json .
 RUN npm install 
+
+ADD . .
 
 CMD ["node", "app.js"]

@@ -1,3 +1,4 @@
+const cowsay = require("cowsay");
 const express = require('express');
 const app = express();
 
@@ -8,8 +9,12 @@ const world = process.env.WORLD
 
 app.get("/", function(req, res) {
     console.log(`Receiving request | uniqueId: ${uniqueId}`);
-    res.send(`Hello ${world}, My uniqueId is ${uniqueId}`);
+    res.send(cowsay.say({
+        text : `Hello ${world}, My uniqueId is ${uniqueId}`,
+        f: 'whale'
+    }) + "\n");
 });
+
 
 console.log(`listening on ${port} | world: ${world} | uniqueId: ${uniqueId}`);
 app.listen(port);
