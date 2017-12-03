@@ -1,3 +1,5 @@
+[![Docker Build Status](https://img.shields.io/docker/build/floriankempenich/hello-world.svg)](https://hub.docker.com/r/floriankempenich/hello-world/)
+
 # Simple Hello-World application
 Used to debug network related operations.
 
