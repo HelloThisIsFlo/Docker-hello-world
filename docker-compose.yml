@@ -1,16 +1,14 @@
 version: '3'
 services:
     ola:
-        build: .
-        image: shockn745/hello-world
+        image: floriankempenich/hello-world
         ports:
             - "1111:80"
         environment:
             - WORLD=mundo
 
     tere:
-        build: .
-        image: shockn745/hello-world
+        image: floriankempenich/hello-world
         ports:
             - "2222:80"
         environment:

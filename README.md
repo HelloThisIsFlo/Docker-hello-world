@@ -7,14 +7,23 @@ To customize the information displayed, simply set the `WORLD` environment varia
 
 ### Example `docker-compose.yml` file
 
-```
+```yaml
 version: '3'
 services:
     bonjour:
-        build: .
-        image: shockn745/hello-world
+        image: floriankempenich/hello-world
         ports:
             - "1111:80"
         environment:
             - WORLD=bonjour
+```
+
+### Example `cli`
+
+```shell
+docker run --rm \
+    --name=hello-world \
+    -e WORLD=monde \
+    -p "1111:80" \
+    floriankempenich/hello-world
 ```
